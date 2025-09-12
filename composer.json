@@ -1,0 +1,7 @@
+{
+  "name": "lance/kusaka_lance",
+  "description": "Simple CRUD app",
+  "require": {
+    "php": ">=8.0"
+  }
+}
