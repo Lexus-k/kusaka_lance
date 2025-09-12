@@ -1,0 +1,88 @@
+/* General Body */
+body {
+  font-family: "Treasure Map Deadhand", "Pirata One", cursive, Arial, sans-serif;
+  background: url("images/bg-onepiece.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container */
+.container {
+  background: rgba(0, 0, 0, 0.75);
+  border: 3px solid #ffcc00;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px #ffcc00;
+  text-align: center;
+  width: 400px;
+  animation: floatBox 3s ease-in-out infinite;
+}
+
+/* Floating Animation */
+@keyframes floatBox {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* Heading */
+h1 {
+  font-size: 2rem;
+  color: #ffcc00;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px #000;
+}
+
+/* Form Styles */
+.pirate-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-size: 1rem;
+  color: #ffcc00;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="email"] {
+  padding: 10px;
+  border: 2px solid #ffcc00;
+  border-radius: 8px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-color: #ff5733;
+  box-shadow: 0px 0px 10px #ff5733;
+}
+
+/* Submit Button */
+input[type="submit"] {
+  background: #ff5733;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+  background: #00c3ff;
+  transform: scale(1.05);
+  box-shadow: 0px 0px 12px #00c3ff;
+}
