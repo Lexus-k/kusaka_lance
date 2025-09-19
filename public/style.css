@@ -177,6 +177,24 @@ tr:nth-child(5) { animation-delay: 1s; }
   animation: shake 0.3s;
 }
 
+.btn-create {
+  background-color: #0ca8e0;
+  color: rgb(91, 5, 5);
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  border: 2px solid #1e0c0c;   /* 🔹 white outline */
+  box-shadow: 0 0 5px rgba(0,0,0,0.4); /* 🔹 subtle shadow for visibility */
+}
+
+.btn-create:hover {
+  background-color: #2a66af;
+  border-color: #FFD700; /* 🔹 gold outline on hover */
+  box-shadow: 0 0 8px rgba(255,215,0,0.7);
+}
+
 /* Shake Animation for Delete */
 @keyframes shake {
   0% { transform: translateX(0); }

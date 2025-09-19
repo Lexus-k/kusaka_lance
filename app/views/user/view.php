@@ -8,6 +8,10 @@
 </head>
 <body>
   <h1>☠ Welcome to One Piece Crew ☠</h1>
+
+   <div style="display: flex; justify-content: space-between; align-items: center; width: 80%; margin: auto; margin-bottom: 15px;">
+    <a href="<?=site_url('user/create');?>" class="btn-create">➕ Create New Crew</a>
+  </div>
   <table>
     <tr>
       <th><img class="skull" src="<?=base_url();?>public/images/skull.png" alt="skull"> ID</th>
