@@ -7,11 +7,21 @@
   <link rel="stylesheet" href="<?=base_url();?>public/style.css">
 </head>
 <body>
-  <h1>☠ Welcome to One Piece Crew ☠</h1>
+  <h1>☠ One Piece Crew ☠</h1>
 
-   <div style="display: flex; justify-content: space-between; align-items: center; width: 80%; margin: auto; margin-bottom: 15px;">
+  <!-- 🔹 Create Button -->
+
+<div style="display: flex; justify-content: space-between; align-items: center; width: 80%; margin: auto; margin-bottom: 15px;">
+    <!-- Create Button -->
     <a href="<?=site_url('user/create');?>" class="btn-create">➕ Create New Crew</a>
-  </div>
+
+    <!-- Search Form -->
+    <form method="get" action="<?= site_url('users'); ?>" class="search-bar">
+        <input type="text" name="q" class="search-input" placeholder="Search username / email" value="<?= html_escape($q ?? '') ?>">
+        <button type="submit" class="search-button">Search</button>
+    </form>
+</div>
+
   <table>
     <tr>
       <th><img class="skull" src="<?=base_url();?>public/images/skull.png" alt="skull"> ID</th>
@@ -19,11 +29,12 @@
       <th>Email</th>
       <th>Action</th>
     </tr>
-    <?php foreach(html_escape($users) as $user): ?>
+    <?php foreach($users as $user): ?>
     <tr>
-      <td><?=$user['id'];?></td>
-      <td><?=$user['username'];?></td>
-      <td><?=$user['email'];?></td>
+      <td><?= html_escape($user['id']); ?></td>
+      <td><?= html_escape($user['username']); ?></td>
+      <td><?= html_escape($user['email']); ?></td>
+
       <td>
         <a href="<?=site_url('user/update/'. $user['id']);?>" class="btn-edit">✍ Edit</a>
         <a href="<?=site_url('user/delete/'. $user['id']);?>" 
@@ -33,5 +44,11 @@
     </tr>
     <?php endforeach; ?>
   </table>
+    <!-- Pagination -->
+    <?php if (!empty($page)): ?>
+        <div class="pagination">
+            <?= $page ?>
+        </div>
+    <?php endif; ?>
 </body>
 </html>

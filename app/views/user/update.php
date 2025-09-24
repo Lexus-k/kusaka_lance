@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>☠ Update Pirate Crew Member ☠</h1>
+        <h1>☠ Pirate Crew ☠</h1>
         <form action="<?=site_url('user/update/'. $user['id']);?>" method="post" class="pirate-form">
             <label for="username">Crew Name:</label>
             <input type="text" id="username" name="username" value="<?=html_escape($user['username']);?>" required>

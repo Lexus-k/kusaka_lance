@@ -62,6 +62,48 @@ h1:hover {
 }
 
 /* ========================= */
+/* SEARCH BAR                 */
+/* ========================= */
+.search-bar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.search-input {
+  padding: 10px 12px;
+  border: 2px solid #d4af37;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.08);
+  color: #eae323;
+  min-width: 260px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: #ffcc00;
+  box-shadow: 0 0 10px rgba(255,204,0,0.4);
+}
+
+.search-button {
+  padding: 10px 14px;
+  border: 2px solid #ffcc00;
+  border-radius: 8px;
+  background: #2b1b0e;
+  color: #ffcc00;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.search-button:hover {
+  background: #ffcc00;
+  color: #2b1b0e;
+  box-shadow: 0 0 10px rgba(255,204,0,0.6);
+}
+
+/* ========================= */
 /* TREASURE CHEST STYLE TABLE */
 /* ========================= */
 table {
@@ -178,7 +220,7 @@ tr:nth-child(5) { animation-delay: 1s; }
 }
 
 .btn-create {
-  background-color: #0ca8e0;
+  background-color: #255 255 255;
   color: rgb(91, 5, 5);
   padding: 8px 15px;
   border-radius: 5px;
@@ -194,6 +236,7 @@ tr:nth-child(5) { animation-delay: 1s; }
   border-color: #FFD700; /* 🔹 gold outline on hover */
   box-shadow: 0 0 8px rgba(255,215,0,0.7);
 }
+
 
 /* Shake Animation for Delete */
 @keyframes shake {
@@ -224,4 +267,55 @@ input[type="submit"]:hover {
   color: #fff;
   box-shadow: 0px 0px 12px #000;
   transform: scale(1.05);
+}
+
+
+/* ========================= */
+/* PAGINATION STYLES          */
+/* ========================= */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 18px auto;
+}
+
+.pagination ul,
+.pagination-list { /* support library's default class */
+  list-style: none;
+  display: flex;
+  gap: 6px;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination li,
+.page-item,
+.pagination-item {
+  display: inline-block;
+}
+
+.pagination a,
+.page-link,
+.pagination-link {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 2px solid #d4af37;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.08);
+  color: #ffcc00;
+}
+
+.pagination a:hover,
+.page-link:hover,
+.pagination-link:hover {
+  background: #ffcc00;
+  color: #2b1b0e;
+  box-shadow: 0 0 8px #d4af37;
+}
+
+.active .page-link,
+.active .pagination-link {
+  background: #ffcc00;
+  color: #2b1b0e;
+  border-color: #ffcc00;
 }
