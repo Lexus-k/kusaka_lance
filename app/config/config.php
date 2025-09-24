@@ -79,7 +79,7 @@ $config['ENVIRONMENT']             = 'development';
 | WARNING: You MUST set this value!
 |
 */
-$config['base_url'] 				= 'https://kusaka-lance.onrender.com';
+$config['base_url'] 				= 'https://kusaka-lance.onrender.com/';
 
 /*
 |--------------------------------------------------------------------------
@@ -90,7 +90,7 @@ $config['base_url'] 				= 'https://kusaka-lance.onrender.com';
 | variable to blank.
 |
 */
-$config['index_page']               = '.htaccess';
+$config['index_page']               = '';
 
 /*
 |--------------------------------------------------------------------------
