@@ -319,3 +319,23 @@ input[type="submit"]:hover {
   color: #2b1b0e;
   border-color: #ffcc00;
 }
+
+/* 🔹 Logout Button (same design as search button) */
+.btn-logout {
+  padding: 10px 14px;
+  border: 2px solid #ffcc00;
+  border-radius: 8px;
+  background: #2b1b0e;
+  color: #ffcc00;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+  display: inline-block;
+}
+
+.btn-logout:hover {
+  background: #ffcc00;
+  color: #2b1b0e;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.6);
+}

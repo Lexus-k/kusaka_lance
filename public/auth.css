@@ -1,0 +1,143 @@
+/* ===========================
+   🌊 ONE PIECE LOGIN/REGISTER THEME WITH GLOW ANIMATION
+   =========================== */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url("images/bg-onepiece.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+/* 🔹 Center the login/register container */
+.auth-box, .auth-container {
+  width: 90%;
+  max-width: 400px;
+  margin: 5% auto;
+  padding: 30px 25px;
+  background: rgba(43, 27, 14, 0.9);
+  border: 2px solid #ffcc00;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.6);
+  text-align: center;
+  backdrop-filter: blur(4px);
+}
+
+/* 🔹 Titles with glowing animation */
+.auth-box h2, .auth-container h1 {
+  color: #ffcc00;
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-shadow: 0 0 10px rgba(255, 204, 0, 0.6);
+  animation: glowText 2s infinite alternate;
+}
+
+/* 🔹 Input fields */
+.auth-box input,
+.auth-form input,
+.auth-form select {
+  width: 85%;
+  max-width: 100%;
+  padding: 12px 10px;
+  margin: 10px 0;
+  border: 2px solid #ffcc00;
+  border-radius: 8px;
+  background: rgba(43, 27, 14, 0.8);
+  color: #ffcc00;
+  text-align: left;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.auth-box input:focus,
+.auth-form input:focus,
+.auth-form select:focus {
+  background: rgba(255, 204, 0, 0.1);
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.6);
+}
+
+/* 🔹 Buttons with glowing hover effect */
+.btn-login,
+.btn-register {
+  width: 60%;
+  padding: 10px;
+  margin: 15px auto 0;
+  border: 2px solid #ffcc00;
+  border-radius: 8px;
+  background: #2b1b0e;
+  color: #ffcc00;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  display: block;
+}
+
+.btn-login:hover,
+.btn-register:hover {
+  background: #ffcc00;
+  color: #2b1b0e;
+  box-shadow: 0 0 20px 4px rgba(255, 204, 0, 0.8);
+  animation: glowButton 1.5s infinite alternate;
+}
+
+/* 🔹 Links */
+.auth-link,
+.register-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.auth-link:hover,
+.register-link:hover {
+  color: #ffcc00;
+  text-shadow: 0 0 8px #ffcc00;
+  text-decoration: underline;
+}
+
+/* 🔹 Register text under form */
+.register-text {
+  margin-top: 20px;
+  color: #ffcc00;
+  font-size: 14px;
+}
+
+/* 🔹 Glowing Animations */
+@keyframes glowText {
+  from { text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00; }
+  to { text-shadow: 0 0 15px #ffcc00, 0 0 30px #ffcc00; }
+}
+
+@keyframes glowButton {
+  from { box-shadow: 0 0 10px 2px rgba(255, 204, 0, 0.6); }
+  to { box-shadow: 0 0 20px 6px rgba(255, 204, 0, 0.9); }
+}
+
+/* 🔹 Responsive adjustments */
+@media (max-width: 480px) {
+  .auth-box, .auth-container {
+    padding: 20px;
+  }
+
+  .auth-box h2, .auth-container h1 {
+    font-size: 20px;
+  }
+
+  .auth-box input,
+  .auth-form input,
+  .auth-form select,
+  .btn-login,
+  .btn-register {
+    width: 100%;
+  }
+}
